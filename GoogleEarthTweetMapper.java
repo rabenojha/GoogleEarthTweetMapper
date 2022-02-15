@@ -5,10 +5,6 @@ public class GoogleEarthTweetMapper {
 	
 	// Setting the working directory. Please remember to change this to your setting before you run the program.
 	public static String working_directory = "D:\\CDE\\1st semester\\Practice  Software Development\\End term project\\Outputs";
-//	public static String image_directory = "D:\\CDE\\1st semester\\Practice  Software Development\\End term project\\Outputs\\wms_img.png";
-//	public static String kml_directory = "D:\\CDE\\1st semester\\Practice  Software Development\\End term project\\Outputs\\img.kml";
-//	public static String tweet_directory = "D:\\CDE\\1st semester\\Practice  Software Development\\End term project\\Outputs\\tweet.csv";
-	
 
 	
 	// WMS information
