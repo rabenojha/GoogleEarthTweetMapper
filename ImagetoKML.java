@@ -6,63 +6,54 @@ import java.io.File;
 import java.io.FileWriter;
 
 
-public class ImagetoKML {
+public class ImagetoKMLs {
 	
-	public static void image_to_kml(String working_directory) {
+
+	public static String image_to_kml(String working_directory) {  // returns string
+		String output = "";
 		
-		// Creating an array for the KML
+		// Creating an array for the KML (only body)
 		
-		String [] Array = {"<?xml version=\"1.0\" encoding=\"UTF-8\"?>",
-				"<kml xmlns=\"http://www.opengis.net/kml/2.2\">",
+		String [] Array = {
 				"<Folder>",
-				"<name>Boston</name>",
+				"<name>Boston</name>\\r\\n",
 				"",
-				" <GroundOverlay>",
-				"<name></name>",
-				"<description>The image is downloaded \r\n"
-				+ "          on July 13th, 2001.</description>",
-				"<Icon>\r\n"
-				+ "        <href> working directory + \"\\wms_img.png\"</href>\r\n"
-				+ "      </Icon>",
-				"<LatLonBox>",
-				"<north>42.42</north>",
-				"<south>42.32</south>",
-				"<east>-71.03</east>",
-				"<west>-71.13</west>",
-				"<rotation>-0.1556640799496235</rotation>",
-				"</LatLonBox>",
-				"</GroundOverlay>",
+				" <GroundOverlay>\\r\\n",
+				"<name>WMS Image</name>\\r\\n",
+				"<description>The image is downloaded \\r\\n"
+				+ "          from http://maps.heigit.org/osm-wms/service </description>\\r\\n",
+				"<Icon>\\r\\n"
+				+ "        <href> working directory + \"\\wms_img.png\"</href>\\r\\n"
+				+ "      </Icon>\\r\\n",
+				"<LatLonBox>\\r\\n",
+				"<north>42.42</north>\\r\\n",
+				"<south>42.32</south>\\r\\n",
+				"<east>-71.03</east>\\r\\n",
+				"<west>-71.13</west>\\r\\n",
+				"<rotation>0</rotation>\\r\\n",
+				"</LatLonBox>\\r\\n",
+				"</GroundOverlay>\\r\\n",
 				"</Folder>",
-				"</kml>"
+						
+
+									
 				
 		
 	};
 		System.out.println("-------------------------------------------------");
 //		System.out.println("Works fine until here");
-		System.out.println("-----------------------------");
 		
 		
 		
-		// storing the file
 		
-		try {
-//			
-			// Creates a FileWriter
-			
-			FileWriter output = new FileWriter(working_directory + "\\img.kml");
-			
-			for (String i :Array) {
-				output.write(i);
-			}
-			output.close(); // Closing the file writer
-			System.out.println("Successfull in converting PNG format to KML structure");
-			System.out.println("-------------------------------------------------");
-			System.out.println("Successfull in storing the file to local directory");
-			
-		}catch (IOException e) {
-			System.out.println("There was an error in creating and storing the file");
-		}
-	
+		// storing the information to the string
 
+			
+		for (String i :Array) {
+			output = output+i;
+		}
+
+	
+		return output;
 }
 }
