@@ -50,7 +50,7 @@ public class WMSConnector {
                                            // to be returned from the server
       request.setTransparent(true);
       request.setSRS("EPSG:4326");
-      request.setBBox("47.75,12.98,47.86,13.12");
+      request.setBBox("42.32,-71.13,42.42,-71.03");
       
       
 
