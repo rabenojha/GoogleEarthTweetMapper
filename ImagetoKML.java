@@ -6,7 +6,7 @@ import java.io.File;
 import java.io.FileWriter;
 
 
-public class ImagetoKMLs {
+public class ImagetoKML {
 	
 
 	public static String image_to_kml(String working_directory) {  // returns string
